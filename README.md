@@ -76,13 +76,13 @@ Now, the confusing part comes when quotes appear in the cmd line and in variable
 > Entering : **ls \$VAR**
 > 
 > 1. Variable expansion:	**| ls -l -a |**
-> 2. Split into tokens:	**| ls | | -l | | -a |** (gets splitted on whitespaces)
+> 2. Split into tokens:	**| ls | | -l | | -a |** (gets split on whitespaces)
 > 3. Quote formatting:		**| ls | | -l | | -a |** (no quotes here)
 > 
 > Entering : **ls "\$VAR"**
 > 
 > 1. Variable expansion:	**| ls "-l -a" |**
-> 2. Split into tokens:		**| ls | | "-ls -a" |** (does not get splitted in between quote)
+> 2. Split into tokens:		**| ls | | "-ls -a" |** (does not get split in between quote)
 > 3. Quote formatting:		**| ls | | -ls -a |** (syntactic quotes are removed)
 > 
 > Entering : **ls '\$VAR'**
@@ -96,7 +96,7 @@ Now, the confusing part comes when quotes appear in the cmd line and in variable
 > Entering : **ls \$VAR**
 > 
 > 1. Variable expansion:	**| ls "-l -a" |**
-> 2. Split into tokens:		**| ls | | "-ls | | -a" |** (gets splitted because the quotes are literal)
+> 2. Split into tokens:		**| ls | | "-ls | | -a" |** (gets split because the quotes are literal)
 > 3. Quote formatting:		**| ls | | "-ls | | -a" |** (literal quotes are not removed)
 
 We talked about quotes being interpreted literally when contained in a variable value, however, they are not the exception. Every character contained in a variable value should be interpreted literally, therefore, any special characters ('>', '<', '|', etc...) should be interpreted as T_WORD, and not as any other type of token.
