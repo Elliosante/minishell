@@ -71,7 +71,7 @@ Now, the confusing part comes when quotes appear in the cmd line and in variable
 > 2. Split into tokens:		**| ls | | -la |**
 > 3. Quote formatting:		**| ls | | -la |** (no quotes here)
 >  
-> With **VAR=-l -a**
+> With **export VAR="-l -a"**
 > 
 > Entering : **ls \$VAR**
 > 
@@ -91,7 +91,7 @@ Now, the confusing part comes when quotes appear in the cmd line and in variable
 > 2. Split into tokens:		**| ls | | '$VAR' |**
 > 3. Quote formatting:		**| ls | | $VAR |** (syntactic quotes are removed)
 > 
-> With **VAR="-l -a"**
+> With **export VAR='"-l -a"'**
 > 
 > Entering : **ls \$VAR**
 > 
