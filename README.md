@@ -1,4 +1,4 @@
-** Warning : it's an unfinished version of the project, so expect some bugs when running it **
+**Warning : it's an unfinished version of the project, so expect some bugs when running it**
 
 # Command line parsing
 
