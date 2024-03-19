@@ -1,3 +1,5 @@
+** Warning : it's an unfinished version of the project, so expect some bugs when running it **
+
 # Command line parsing
 
 To effectively interact with command-line input, our algorithm must be able to interpret it. This requires translating the command line input, a process known as parsing. Among the various parsing methods available, we have selected a Recursive Descent parser. This choice is motivated by the parser's simplicity and flexibility, making it well-suited for Minishell.
